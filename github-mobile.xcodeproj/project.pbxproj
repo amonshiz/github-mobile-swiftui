@@ -13,12 +13,12 @@
 		1BBC1A5424D9AA4E00447398 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BBC1A3F24D9AA4B00447398 /* ContentView.swift */; };
 		1BBC1A5524D9AA4E00447398 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BBC1A4024D9AA4E00447398 /* Assets.xcassets */; };
 		1BBC1A5624D9AA4E00447398 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BBC1A4024D9AA4E00447398 /* Assets.xcassets */; };
-		1BBC1A6024D9AC0300447398 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BBC1A5F24D9AC0300447398 /* Home.swift */; };
-		1BBC1A6124D9AC0300447398 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BBC1A5F24D9AC0300447398 /* Home.swift */; };
-		1BBC1A6324D9AC0C00447398 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BBC1A6224D9AC0C00447398 /* Notifications.swift */; };
-		1BBC1A6424D9AC0C00447398 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BBC1A6224D9AC0C00447398 /* Notifications.swift */; };
-		1BBC1A6624D9AC1300447398 /* Explore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BBC1A6524D9AC1300447398 /* Explore.swift */; };
-		1BBC1A6724D9AC1300447398 /* Explore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BBC1A6524D9AC1300447398 /* Explore.swift */; };
+		1BBC1A6E24D9C16400447398 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BBC1A6924D9C16400447398 /* Notifications.swift */; };
+		1BBC1A6F24D9C16400447398 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BBC1A6924D9C16400447398 /* Notifications.swift */; };
+		1BBC1A7024D9C16400447398 /* Explore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BBC1A6B24D9C16400447398 /* Explore.swift */; };
+		1BBC1A7124D9C16400447398 /* Explore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BBC1A6B24D9C16400447398 /* Explore.swift */; };
+		1BBC1A7224D9C16400447398 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BBC1A6D24D9C16400447398 /* Home.swift */; };
+		1BBC1A7324D9C16400447398 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BBC1A6D24D9C16400447398 /* Home.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,9 +30,9 @@
 		1BBC1A4D24D9AA4E00447398 /* github-mobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "github-mobile.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BBC1A4F24D9AA4E00447398 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1BBC1A5024D9AA4E00447398 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
-		1BBC1A5F24D9AC0300447398 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
-		1BBC1A6224D9AC0C00447398 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
-		1BBC1A6524D9AC1300447398 /* Explore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Explore.swift; sourceTree = "<group>"; };
+		1BBC1A6924D9C16400447398 /* Notifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
+		1BBC1A6B24D9C16400447398 /* Explore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Explore.swift; sourceTree = "<group>"; };
+		1BBC1A6D24D9C16400447398 /* Home.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,12 +66,12 @@
 		1BBC1A3D24D9AA4B00447398 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				1BBC1A6A24D9C16400447398 /* Explore */,
+				1BBC1A6C24D9C16400447398 /* Home */,
+				1BBC1A6824D9C16400447398 /* Notifications */,
 				1BBC1A3E24D9AA4B00447398 /* github_mobileApp.swift */,
 				1BBC1A3F24D9AA4B00447398 /* ContentView.swift */,
 				1BBC1A4024D9AA4E00447398 /* Assets.xcassets */,
-				1BBC1A5F24D9AC0300447398 /* Home.swift */,
-				1BBC1A6224D9AC0C00447398 /* Notifications.swift */,
-				1BBC1A6524D9AC1300447398 /* Explore.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -100,6 +100,30 @@
 				1BBC1A5024D9AA4E00447398 /* macOS.entitlements */,
 			);
 			path = macOS;
+			sourceTree = "<group>";
+		};
+		1BBC1A6824D9C16400447398 /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				1BBC1A6924D9C16400447398 /* Notifications.swift */,
+			);
+			path = Notifications;
+			sourceTree = "<group>";
+		};
+		1BBC1A6A24D9C16400447398 /* Explore */ = {
+			isa = PBXGroup;
+			children = (
+				1BBC1A6B24D9C16400447398 /* Explore.swift */,
+			);
+			path = Explore;
+			sourceTree = "<group>";
+		};
+		1BBC1A6C24D9C16400447398 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				1BBC1A6D24D9C16400447398 /* Home.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,10 +223,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1BBC1A6324D9AC0C00447398 /* Notifications.swift in Sources */,
+				1BBC1A6E24D9C16400447398 /* Notifications.swift in Sources */,
 				1BBC1A5324D9AA4E00447398 /* ContentView.swift in Sources */,
-				1BBC1A6624D9AC1300447398 /* Explore.swift in Sources */,
-				1BBC1A6024D9AC0300447398 /* Home.swift in Sources */,
+				1BBC1A7024D9C16400447398 /* Explore.swift in Sources */,
+				1BBC1A7224D9C16400447398 /* Home.swift in Sources */,
 				1BBC1A5124D9AA4E00447398 /* github_mobileApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -211,10 +235,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1BBC1A6424D9AC0C00447398 /* Notifications.swift in Sources */,
+				1BBC1A6F24D9C16400447398 /* Notifications.swift in Sources */,
 				1BBC1A5424D9AA4E00447398 /* ContentView.swift in Sources */,
-				1BBC1A6724D9AC1300447398 /* Explore.swift in Sources */,
-				1BBC1A6124D9AC0300447398 /* Home.swift in Sources */,
+				1BBC1A7124D9C16400447398 /* Explore.swift in Sources */,
+				1BBC1A7324D9C16400447398 /* Home.swift in Sources */,
 				1BBC1A5224D9AA4E00447398 /* github_mobileApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
