@@ -21,11 +21,7 @@ struct HomeList: View {
 
       FavoritesSection()
 
-      HomeListSection(header: "Recent") {
-        ForEach(0..<5) { val in
-          Text("\(val)")
-        }
-      }
+      RecentSection()
     }
   }
 }
