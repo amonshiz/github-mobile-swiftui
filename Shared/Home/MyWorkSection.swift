@@ -7,42 +7,16 @@
 
 import SwiftUI
 
-struct MyWorkRow: View {
-  let title: String
-  let iconName: String
-  let backgroundColor: Color
-
-  var body: some View {
-    NavigationLink(
-      destination: Text(title),
-      label: {
-        Label {
-          Text(title)
-        } icon: {
-          Image(systemName: iconName)
-            .frame(width: 20, height: 20)
-            .foregroundColor(.white)
-            .padding(6)
-            .background(
-              RoundedRectangle(cornerRadius: 5)
-                .fill(backgroundColor)
-            )
-        }
-      })
-      .modifier(HomeListRowModifier())
-  }
-}
-
 struct MyWorkSection: View {
   var body: some View {
     HomeListSection(header: "My Work") {
-      MyWorkRow(title: "Issues", iconName: "exclamationmark.circle", backgroundColor: .green)
+      IconRow(style: .base(title: "Issues", iconName: "exclamationmark.circle", backgroundColor: .green))
 
-      MyWorkRow(title: "Pull Requests", iconName: "point.topleft.down.curvedto.point.bottomright.up", backgroundColor: .blue)
+      IconRow(style: .base(title: "Pull Requests", iconName: "point.topleft.down.curvedto.point.bottomright.up", backgroundColor: .blue))
 
-      MyWorkRow(title: "Repositories", iconName: "book.closed", backgroundColor: .purple)
+      IconRow(style: .base(title: "Repositories", iconName: "book.closed", backgroundColor: .purple))
 
-      MyWorkRow(title: "Organizations", iconName: "person.2", backgroundColor: .orange)
+      IconRow(style: .base(title: "Organizations", iconName: "person.2", backgroundColor: .orange))
     }
   }
 }

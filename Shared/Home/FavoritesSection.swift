@@ -12,22 +12,7 @@ struct FavoritesRow: View {
   let repoName: String
 
   var body: some View {
-    NavigationLink(
-      destination: Text(repoName),
-      label: {
-        Label {
-          Text(repoName)
-        } icon: {
-          Image(systemName: imageName)
-            .frame(width: 20, height: 20)
-            .padding(6)
-            .background(
-              RoundedRectangle(cornerRadius: 5)
-                .fill(Color.yellow)
-            )
-        }
-      })
-      .modifier(HomeListRowModifier())
+    IconRow(style: .base(title: repoName, iconName: imageName, backgroundColor: .yellow))
   }
 }
 
