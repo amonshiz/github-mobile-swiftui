@@ -10,11 +10,7 @@ import SwiftUI
 struct HomeList: View {
   var body: some View {
     List {
-      HomeListSection(header: "My Work") {
-        ForEach(0..<5) { val in
-          Text("\(val)")
-        }
-      }
+      MyWorkSection()
 
       HomeListSection {
         HStack(alignment: .bottom) {

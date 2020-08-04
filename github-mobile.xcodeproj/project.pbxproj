@@ -23,6 +23,8 @@
 		1BBC1A7624D9C1F400447398 /* HomeListSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BBC1A7424D9C1F400447398 /* HomeListSection.swift */; };
 		1BBC1A7824D9C29400447398 /* HomeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BBC1A7724D9C29400447398 /* HomeList.swift */; };
 		1BBC1A7924D9C29400447398 /* HomeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BBC1A7724D9C29400447398 /* HomeList.swift */; };
+		1BBC1A7B24D9C31200447398 /* MyWorkSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BBC1A7A24D9C31200447398 /* MyWorkSection.swift */; };
+		1BBC1A7C24D9C31200447398 /* MyWorkSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BBC1A7A24D9C31200447398 /* MyWorkSection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +41,7 @@
 		1BBC1A6D24D9C16400447398 /* Home.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		1BBC1A7424D9C1F400447398 /* HomeListSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeListSection.swift; sourceTree = "<group>"; };
 		1BBC1A7724D9C29400447398 /* HomeList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeList.swift; sourceTree = "<group>"; };
+		1BBC1A7A24D9C31200447398 /* MyWorkSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWorkSection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +133,7 @@
 				1BBC1A6D24D9C16400447398 /* Home.swift */,
 				1BBC1A7424D9C1F400447398 /* HomeListSection.swift */,
 				1BBC1A7724D9C29400447398 /* HomeList.swift */,
+				1BBC1A7A24D9C31200447398 /* MyWorkSection.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -235,6 +239,7 @@
 				1BBC1A7524D9C1F400447398 /* HomeListSection.swift in Sources */,
 				1BBC1A6E24D9C16400447398 /* Notifications.swift in Sources */,
 				1BBC1A5324D9AA4E00447398 /* ContentView.swift in Sources */,
+				1BBC1A7B24D9C31200447398 /* MyWorkSection.swift in Sources */,
 				1BBC1A7024D9C16400447398 /* Explore.swift in Sources */,
 				1BBC1A7224D9C16400447398 /* Home.swift in Sources */,
 				1BBC1A5124D9AA4E00447398 /* github_mobileApp.swift in Sources */,
@@ -249,6 +254,7 @@
 				1BBC1A7624D9C1F400447398 /* HomeListSection.swift in Sources */,
 				1BBC1A6F24D9C16400447398 /* Notifications.swift in Sources */,
 				1BBC1A5424D9AA4E00447398 /* ContentView.swift in Sources */,
+				1BBC1A7C24D9C31200447398 /* MyWorkSection.swift in Sources */,
 				1BBC1A7124D9C16400447398 /* Explore.swift in Sources */,
 				1BBC1A7324D9C16400447398 /* Home.swift in Sources */,
 				1BBC1A5224D9AA4E00447398 /* github_mobileApp.swift in Sources */,
