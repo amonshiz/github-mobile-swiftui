@@ -29,7 +29,7 @@ struct MyWorkRow: View {
             )
         }
       })
-      .padding([.top, .bottom], 5)
+      .modifier(HomeListRowModifier())
   }
 }
 
