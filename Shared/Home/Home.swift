@@ -25,9 +25,11 @@ struct Home: View {
         .navigationTitle("Home")
         .toolbar(items: {
           ToolbarItem(placement: .destructiveAction) {
-            Circle()
-              .fill(Color.red)
-              .frame(minWidth: 24, minHeight: 24)
+            NavigationLink(destination: Profile()) {
+              Circle()
+                .fill(Color.red)
+                .frame(minWidth: 24, minHeight: 24)
+            }
           }
           ToolbarItem(placement: .confirmationAction) {
             Label {
