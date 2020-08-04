@@ -28,42 +28,53 @@ struct EditButtonModifier: ViewModifier {
   }
 }
 
+struct SectionContent<Header, Content>: View where Header: View, Content: View {
+  let header: () -> Header
+  let content: () -> Content
+  
+  init(@ViewBuilder header: @escaping () -> Header, @ViewBuilder content: @escaping () -> Content) {
+    self.header = header
+    self.content = content
+  }
+  
+  var body: some View {
+    Section(header:
+              header()
+              .padding([.bottom], 5)
+              .modifier(SectionTitleModifier()),
+            content: content)
+  }
+}
+
+extension SectionContent where Header == Text, Content: View {
+  init(header: String, @ViewBuilder content: @escaping () -> Content) {
+    self.init(header: { Text(header) }, content: content)
+  }
+}
+
 struct TempView: View {
   var body: some View {
     List {
-      Section(
-        header:
-          Text("My Work")
-          .modifier(SectionTitleModifier())
-          .padding([.bottom], 5)
-      ) {
+      SectionContent(header: "My Work") {
         ForEach(0..<5) { val in
           Text("\(val)")
         }
       }
-
-      Section(
-        header:
-          HStack(alignment: .bottom) {
-            Text("Favorites")
-              .modifier(SectionTitleModifier())
-            Spacer()
-            EditButton()
-              .modifier(EditButtonModifier())
-          }
-          .padding([.bottom], 5)
-      ) {
+      
+      SectionContent {
+        HStack(alignment: .bottom) {
+          Text("Favorites")
+          Spacer()
+          EditButton()
+            .modifier(EditButtonModifier())
+        }
+      } content: {
         ForEach(0..<5) { val in
           Text("\(val)")
         }
       }
-
-      Section(
-        header:
-          Text("Recent")
-          .padding([.bottom], 5)
-          .modifier(SectionTitleModifier())
-      ) {
+      
+      SectionContent(header: "Recent") {
         ForEach(0..<5) { val in
           Text("\(val)")
         }
