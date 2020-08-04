@@ -13,19 +13,23 @@ struct MyWorkRow: View {
   let backgroundColor: Color
 
   var body: some View {
-    Label {
-      Text(title)
-    } icon: {
-      Image(systemName: iconName)
-        .frame(width: 20, height: 20)
-        .foregroundColor(.white)
-        .padding(6)
-        .background(
-          RoundedRectangle(cornerRadius: 5)
-            .fill(backgroundColor)
-        )
-    }
-    .padding([.top, .bottom], 5)
+    NavigationLink(
+      destination: Text(title),
+      label: {
+        Label {
+          Text(title)
+        } icon: {
+          Image(systemName: iconName)
+            .frame(width: 20, height: 20)
+            .foregroundColor(.white)
+            .padding(6)
+            .background(
+              RoundedRectangle(cornerRadius: 5)
+                .fill(backgroundColor)
+            )
+        }
+      })
+      .padding([.top, .bottom], 5)
   }
 }
 
@@ -45,9 +49,11 @@ struct MyWorkSection: View {
 
 struct MyWorkSection_Previews: PreviewProvider {
   static var previews: some View {
-    List {
-      MyWorkSection()
+    NavigationView {
+      List {
+        MyWorkSection()
+      }
+      .listStyle(InsetGroupedListStyle())
     }
-    .listStyle(InsetGroupedListStyle())
   }
 }
