@@ -9,9 +9,9 @@ import SwiftUI
 
 @main
 struct github_mobileApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
+  var body: some Scene {
+    WindowGroup {
+      ContentView()
     }
+  }
 }
