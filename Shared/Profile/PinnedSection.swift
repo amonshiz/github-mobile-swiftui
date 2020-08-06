@@ -21,7 +21,7 @@ struct PinnedSection: View {
         Image(systemName: "pin").rotationEffect(.degrees(-45))
       }
 
-      ScrollView(.horizontal) {
+      ScrollView(.horizontal, showsIndicators: false) {
         LazyHGrid(rows: cardRows, spacing: 15) {
           ForEach(0..<20) { _ in
             PinnedSectionCard()

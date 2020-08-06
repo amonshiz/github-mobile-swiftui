@@ -8,13 +8,37 @@
 import SwiftUI
 
 struct Explore: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+  var body: some View {
+    ScrollView(.vertical) {
+      Text("Featured Repository")
+
+      Text("For You")
+      ScrollView(.horizontal) {
+        LazyHStack {
+          ForEach(0..<20) { _ in
+            Text("For You")
+          }
+        }
+      }
+
+      Text("Treanding today")
+      ScrollView(.horizontal) {
+        LazyHStack {
+          ForEach(0..<20) { _ in
+            Text("Trending")
+          }
+        }
+      }
     }
+    .navigationTitle("Explore")
+    .navigationBarTitleDisplayMode(.large)
+  }
 }
 
 struct Explore_Previews: PreviewProvider {
-    static var previews: some View {
-        Explore()
+  static var previews: some View {
+    NavigationView {
+      Explore()
     }
+  }
 }
