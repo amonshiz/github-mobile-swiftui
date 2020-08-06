@@ -33,6 +33,8 @@
 		1BBC1A7924D9C29400447398 /* HomeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BBC1A7724D9C29400447398 /* HomeList.swift */; };
 		1BBC1A7B24D9C31200447398 /* MyWorkSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BBC1A7A24D9C31200447398 /* MyWorkSection.swift */; };
 		1BBC1A7C24D9C31200447398 /* MyWorkSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BBC1A7A24D9C31200447398 /* MyWorkSection.swift */; };
+		1BCC2F7E24DC54AF00A81903 /* ProfileInfoSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCC2F7D24DC54AF00A81903 /* ProfileInfoSection.swift */; };
+		1BCC2F7F24DC54AF00A81903 /* ProfileInfoSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCC2F7D24DC54AF00A81903 /* ProfileInfoSection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +56,7 @@
 		1BBC1A7424D9C1F400447398 /* HomeListSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeListSection.swift; sourceTree = "<group>"; };
 		1BBC1A7724D9C29400447398 /* HomeList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeList.swift; sourceTree = "<group>"; };
 		1BBC1A7A24D9C31200447398 /* MyWorkSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWorkSection.swift; sourceTree = "<group>"; };
+		1BCC2F7D24DC54AF00A81903 /* ProfileInfoSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInfoSection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				1B145E6724DA09F60078CE29 /* Profile.swift */,
+				1BCC2F7D24DC54AF00A81903 /* ProfileInfoSection.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -279,6 +283,7 @@
 				1B145E6C24DA15190078CE29 /* IconRow.swift in Sources */,
 				1BBC1A7224D9C16400447398 /* Home.swift in Sources */,
 				1BBC1A5124D9AA4E00447398 /* github_mobileApp.swift in Sources */,
+				1BCC2F7E24DC54AF00A81903 /* ProfileInfoSection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,6 +303,7 @@
 				1B145E6D24DA15190078CE29 /* IconRow.swift in Sources */,
 				1BBC1A7324D9C16400447398 /* Home.swift in Sources */,
 				1BBC1A5224D9AA4E00447398 /* github_mobileApp.swift in Sources */,
+				1BCC2F7F24DC54AF00A81903 /* ProfileInfoSection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
