@@ -25,38 +25,55 @@ struct StarButton: View {
         .fill(Color.white)
         .shadow(color: Color.black.opacity(0.2), radius: 5, x: 0.0, y: 2.0)
     )
-    .padding()
   }
 }
 
 struct ExploreRepoCard: View {
   var body: some View {
-    VStack {
-      Text("Hero Image")
-      Text("Featured Repository")
-        .font(Font.body.smallCaps())
+    VStack(alignment: .leading, spacing: 0) {
+      Rectangle()
+        .aspectRatio(2.0, contentMode: .fit)
+        .frame(maxWidth: .infinity)
 
-      Text("Repo Name")
-      Text("Repo Description")
-      HStack {
-        Label {
-          Text("Stars")
-        } icon: {
-          Image(systemName: "star.fill")
-            .foregroundColor(.yellow)
-            .imageScale(.small)
-        }
+      VStack(alignment: .leading, spacing: 5) {
+        Text("Featured Repository")
+          .font(Font.caption.smallCaps())
+          .padding([.top], 8)
 
-        Label {
-          Text("Language")
-        } icon: {
-          Image(systemName:"circle.fill")
-            .foregroundColor(Color(UIColor.systemTeal))
-            .imageScale(.small)
+        Text("Ciphey")
+          .font(.title2)
+          .boldBlack()
+        Text("This is the song that never ends. Yes it goes on and on my friends. Some people started singing it, not knowing what it was. And they'll continue signing forever just  because")
+          .fixedSize(horizontal: false, vertical: true)
+          .truncationMode(.tail)
+          .lineLimit(3)
+          .font(.body)
+        HStack {
+          Label {
+            Text("590")
+              .font(.callout)
+              .foregroundColor(Color(UIColor.darkGray))
+          } icon: {
+            Image(systemName: "star.fill")
+              .foregroundColor(.yellow)
+              .imageScale(.small)
+          }
+
+          Label {
+            Text("Python")
+              .font(.callout)
+              .foregroundColor(Color(UIColor.darkGray))
+          } icon: {
+            Image(systemName:"circle.fill")
+              .foregroundColor(Color(UIColor.systemTeal))
+              .imageScale(.small)
+          }
         }
+        .padding([.bottom], 3)
+
+        StarButton()
       }
-
-      StarButton()
+      .padding([.leading, .trailing, .bottom])
     }
   }
 }
@@ -64,5 +81,7 @@ struct ExploreRepoCard: View {
 struct ExploreRepoCard_Previews: PreviewProvider {
   static var previews: some View {
     ExploreRepoCard()
+      .frame(width:343)
+      .border(Color.black)
   }
 }

@@ -9,28 +9,33 @@ import SwiftUI
 
 struct Explore: View {
   var body: some View {
-    ScrollView(.vertical) {
-      Text("Featured Repository")
+    NavigationView {
+      ScrollView(.vertical) {
+        VStack {
+          ExploreRepoCard()
+            .frame(width: 343, height: 360)
 
-      Text("For You")
-      ScrollView(.horizontal) {
-        LazyHStack {
-          ForEach(0..<20) { _ in
-            Text("For You")
+          Text("For You")
+          ScrollView(.horizontal) {
+            LazyHStack {
+              ForEach(0..<20) { _ in
+                Text("For You")
+              }
+            }
+          }
+
+          Text("Treanding today")
+          ScrollView(.horizontal) {
+            LazyHStack {
+              ForEach(0..<20) { _ in
+                Text("Trending")
+              }
+            }
           }
         }
       }
-
-      Text("Treanding today")
-      ScrollView(.horizontal) {
-        LazyHStack {
-          ForEach(0..<20) { _ in
-            Text("Trending")
-          }
-        }
-      }
+      .navigationTitle("Explore")
     }
-    .navigationTitle("Explore")
     .navigationBarTitleDisplayMode(.large)
   }
 }
