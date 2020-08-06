@@ -15,6 +15,8 @@
 		1B145E6924DA09F60078CE29 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B145E6724DA09F60078CE29 /* Profile.swift */; };
 		1B145E6C24DA15190078CE29 /* IconRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B145E6B24DA15190078CE29 /* IconRow.swift */; };
 		1B145E6D24DA15190078CE29 /* IconRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B145E6B24DA15190078CE29 /* IconRow.swift */; };
+		1BA6E6BF24DC99510071A4D9 /* PinnedSectionCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA6E6BE24DC99510071A4D9 /* PinnedSectionCard.swift */; };
+		1BA6E6C024DC99510071A4D9 /* PinnedSectionCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA6E6BE24DC99510071A4D9 /* PinnedSectionCard.swift */; };
 		1BBC1A5124D9AA4E00447398 /* github_mobileApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BBC1A3E24D9AA4B00447398 /* github_mobileApp.swift */; };
 		1BBC1A5224D9AA4E00447398 /* github_mobileApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BBC1A3E24D9AA4B00447398 /* github_mobileApp.swift */; };
 		1BBC1A5324D9AA4E00447398 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BBC1A3F24D9AA4B00447398 /* ContentView.swift */; };
@@ -35,6 +37,8 @@
 		1BBC1A7C24D9C31200447398 /* MyWorkSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BBC1A7A24D9C31200447398 /* MyWorkSection.swift */; };
 		1BCC2F7E24DC54AF00A81903 /* ProfileInfoSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCC2F7D24DC54AF00A81903 /* ProfileInfoSection.swift */; };
 		1BCC2F7F24DC54AF00A81903 /* ProfileInfoSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCC2F7D24DC54AF00A81903 /* ProfileInfoSection.swift */; };
+		1BCC2F8124DC60AA00A81903 /* PinnedSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCC2F8024DC60AA00A81903 /* PinnedSection.swift */; };
+		1BCC2F8224DC60AA00A81903 /* PinnedSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCC2F8024DC60AA00A81903 /* PinnedSection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +46,7 @@
 		1B145E6324D9E9EA0078CE29 /* RecentSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentSection.swift; sourceTree = "<group>"; };
 		1B145E6724DA09F60078CE29 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		1B145E6B24DA15190078CE29 /* IconRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconRow.swift; sourceTree = "<group>"; };
+		1BA6E6BE24DC99510071A4D9 /* PinnedSectionCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinnedSectionCard.swift; sourceTree = "<group>"; };
 		1BBC1A3E24D9AA4B00447398 /* github_mobileApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = github_mobileApp.swift; sourceTree = "<group>"; };
 		1BBC1A3F24D9AA4B00447398 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1BBC1A4024D9AA4E00447398 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -57,6 +62,7 @@
 		1BBC1A7724D9C29400447398 /* HomeList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeList.swift; sourceTree = "<group>"; };
 		1BBC1A7A24D9C31200447398 /* MyWorkSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWorkSection.swift; sourceTree = "<group>"; };
 		1BCC2F7D24DC54AF00A81903 /* ProfileInfoSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInfoSection.swift; sourceTree = "<group>"; };
+		1BCC2F8024DC60AA00A81903 /* PinnedSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinnedSection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +88,8 @@
 			children = (
 				1B145E6724DA09F60078CE29 /* Profile.swift */,
 				1BCC2F7D24DC54AF00A81903 /* ProfileInfoSection.swift */,
+				1BCC2F8024DC60AA00A81903 /* PinnedSection.swift */,
+				1BA6E6BE24DC99510071A4D9 /* PinnedSectionCard.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -278,10 +286,12 @@
 				1B145E6424D9E9EA0078CE29 /* RecentSection.swift in Sources */,
 				1BBC1A7B24D9C31200447398 /* MyWorkSection.swift in Sources */,
 				1BBC1A7024D9C16400447398 /* Explore.swift in Sources */,
+				1BA6E6BF24DC99510071A4D9 /* PinnedSectionCard.swift in Sources */,
 				1B145E6124D9E6B80078CE29 /* FavoritesSection.swift in Sources */,
 				1B145E6824DA09F60078CE29 /* Profile.swift in Sources */,
 				1B145E6C24DA15190078CE29 /* IconRow.swift in Sources */,
 				1BBC1A7224D9C16400447398 /* Home.swift in Sources */,
+				1BCC2F8124DC60AA00A81903 /* PinnedSection.swift in Sources */,
 				1BBC1A5124D9AA4E00447398 /* github_mobileApp.swift in Sources */,
 				1BCC2F7E24DC54AF00A81903 /* ProfileInfoSection.swift in Sources */,
 			);
@@ -298,10 +308,12 @@
 				1B145E6524D9E9EA0078CE29 /* RecentSection.swift in Sources */,
 				1BBC1A7C24D9C31200447398 /* MyWorkSection.swift in Sources */,
 				1BBC1A7124D9C16400447398 /* Explore.swift in Sources */,
+				1BA6E6C024DC99510071A4D9 /* PinnedSectionCard.swift in Sources */,
 				1B145E6224D9E6B80078CE29 /* FavoritesSection.swift in Sources */,
 				1B145E6924DA09F60078CE29 /* Profile.swift in Sources */,
 				1B145E6D24DA15190078CE29 /* IconRow.swift in Sources */,
 				1BBC1A7324D9C16400447398 /* Home.swift in Sources */,
+				1BCC2F8224DC60AA00A81903 /* PinnedSection.swift in Sources */,
 				1BBC1A5224D9AA4E00447398 /* github_mobileApp.swift in Sources */,
 				1BCC2F7F24DC54AF00A81903 /* ProfileInfoSection.swift in Sources */,
 			);

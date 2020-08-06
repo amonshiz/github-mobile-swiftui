@@ -7,14 +7,6 @@
 
 import SwiftUI
 
-struct Pinned: View {
-  var body: some View {
-    VStack{
-      Text("Pinned")
-    }
-  }
-}
-
 struct Links: View {
   var body: some View {
     Group {
@@ -32,8 +24,10 @@ struct Profile: View {
         .padding([.top, .bottom])
         .padding([.leading], -10)
         .background(Color.white)
-      Section {
-        Pinned()
+      Section{
+        PinnedSection()
+          .padding([.top, .bottom])
+
         Links()
       }
     }
