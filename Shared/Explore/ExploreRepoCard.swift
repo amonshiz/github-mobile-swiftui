@@ -34,6 +34,9 @@ struct ExploreRepoCard: View {
       Rectangle()
         .aspectRatio(2.0, contentMode: .fit)
         .frame(maxWidth: .infinity)
+        .fixedSize(horizontal: false, vertical: true)
+
+      Divider()
 
       VStack(alignment: .leading, spacing: 5) {
         Text("Featured Repository")
@@ -75,13 +78,20 @@ struct ExploreRepoCard: View {
       }
       .padding([.leading, .trailing, .bottom])
     }
+    .background(Color.white)
+    .clipShape(RoundedRectangle(cornerRadius: 5.0))
+    .shadow(color: Color.black.opacity(0.2), radius: 2, x: 0.0, y: 2.0)
+    .overlay(
+      RoundedRectangle(cornerRadius: 5.0)
+        .stroke(lineWidth: 1.0)
+        .fill(Color(UIColor.lightGray))
+    )
   }
 }
 
 struct ExploreRepoCard_Previews: PreviewProvider {
   static var previews: some View {
     ExploreRepoCard()
-      .frame(width:343)
-      .border(Color.black)
+      .padding([.leading, .trailing, .top])
   }
 }

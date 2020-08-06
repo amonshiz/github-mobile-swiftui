@@ -13,7 +13,7 @@ struct Explore: View {
       ScrollView(.vertical) {
         VStack {
           ExploreRepoCard()
-            .frame(width: 343, height: 360)
+            .padding([.leading, .trailing, .top])
 
           Text("For You")
           ScrollView(.horizontal) {
@@ -34,6 +34,7 @@ struct Explore: View {
           }
         }
       }
+      .background(Color(UIColor.systemGroupedBackground))
       .navigationTitle("Explore")
     }
     .navigationBarTitleDisplayMode(.large)
@@ -42,8 +43,6 @@ struct Explore: View {
 
 struct Explore_Previews: PreviewProvider {
   static var previews: some View {
-    NavigationView {
-      Explore()
-    }
+    Explore()
   }
 }
