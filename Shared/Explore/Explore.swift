@@ -34,7 +34,10 @@ struct Explore: View {
           }
         }
       }
-      .background(Color(UIColor.systemGroupedBackground))
+      .background(
+        Color(UIColor.systemGroupedBackground)
+          .ignoresSafeArea()
+      )
       .navigationTitle("Explore")
     }
     .navigationBarTitleDisplayMode(.large)
