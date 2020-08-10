@@ -112,6 +112,7 @@ struct ExploreRepoCard: View {
         }
         .padding([.bottom], 3)
 
+        Spacer()
         StarButton()
       }
       .padding([.leading, .trailing, .bottom])
