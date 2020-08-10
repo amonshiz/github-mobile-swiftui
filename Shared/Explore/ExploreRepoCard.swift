@@ -7,7 +7,43 @@
 
 import SwiftUI
 
+#if canImport(UIKit)
+import UIKit
+#endif
+
+#if canImport(AppKit)
+import AppKit
+#endif
+
 struct StarButton: View {
+  private enum LocalColor {
+    #if canImport(UIKit)
+    typealias OutputColor = UIColor
+    #elseif canImport(AppKit)
+    typealias OutputColor = NSColor
+    #endif
+
+    case blue
+
+    var outputColor: OutputColor {
+      #if canImport(UIKit)
+      switch self {
+      case .blue:
+        return UIColor.blue
+      default:
+        fatalError()
+      }
+      #elseif canImport(AppKit)
+      switch self {
+      case .blue:
+        return NSColor.systemBlue
+      default:
+        fatalError()
+      }
+      #endif
+    }
+  }
+
   var body: some View {
     Button {
     } label: {
@@ -17,7 +53,7 @@ struct StarButton: View {
         Image(systemName: "star")
       }
       .padding()
-      .foregroundColor(Color(UIColor.blue))
+      .foregroundColor(Color(LocalColor.blue.outputColor))
       .frame(maxWidth: .infinity)
     }
     .background(
@@ -29,6 +65,44 @@ struct StarButton: View {
 }
 
 struct ExploreRepoCard: View {
+  private enum LocalColor {
+    #if canImport(UIKit)
+    typealias OutputColor = UIColor
+    #elseif canImport(AppKit)
+    typealias OutputColor = NSColor
+    #endif
+
+    case lightGray
+    case darkGray
+    case systemTeal
+
+    var outputColor: OutputColor {
+      #if canImport(UIKit)
+      switch self {
+      case .lightGray:
+        return UIColor.lightGray
+      case .darkGray:
+        return UIColor.darkGray
+      case .systemTeal:
+        return UIColor.systemTeal
+      default:
+        fatalError()
+      }
+      #elseif canImport(AppKit)
+      switch self {
+      case .lightGray:
+        return NSColor.lightGray
+      case .darkGray:
+        return NSColor.darkGray
+      case .systemTeal:
+        return NSColor.systemTeal
+      default:
+        fatalError()
+      }
+      #endif
+    }
+  }
+
   var body: some View {
     VStack(alignment: .leading, spacing: 0) {
       Rectangle()
@@ -55,7 +129,7 @@ struct ExploreRepoCard: View {
           Label {
             Text("590")
               .font(.callout)
-              .foregroundColor(Color(UIColor.darkGray))
+              .foregroundColor(Color(LocalColor.darkGray.outputColor))
           } icon: {
             Image(systemName: "star.fill")
               .foregroundColor(.yellow)
@@ -65,10 +139,10 @@ struct ExploreRepoCard: View {
           Label {
             Text("Python")
               .font(.callout)
-              .foregroundColor(Color(UIColor.darkGray))
+              .foregroundColor(Color(LocalColor.darkGray.outputColor))
           } icon: {
             Image(systemName:"circle.fill")
-              .foregroundColor(Color(UIColor.systemTeal))
+              .foregroundColor(Color(LocalColor.systemTeal.outputColor))
               .imageScale(.small)
           }
         }
@@ -84,7 +158,7 @@ struct ExploreRepoCard: View {
     .overlay(
       RoundedRectangle(cornerRadius: 5.0)
         .stroke(lineWidth: 1.0)
-        .fill(Color(UIColor.lightGray))
+        .fill(Color(LocalColor.lightGray.outputColor))
     )
   }
 }

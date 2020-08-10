@@ -14,6 +14,34 @@ extension Text {
 }
 
 struct ProfileInfoSection: View {
+  private enum LocalColor {
+    #if canImport(UIKit)
+    typealias OutputColor = UIColor
+    #elseif canImport(AppKit)
+    typealias OutputColor = NSColor
+    #endif
+
+    case darkGray
+
+    var outputColor: OutputColor {
+      #if canImport(UIKit)
+      switch self {
+      case .darkGray:
+        return UIColor.darkGray
+      default:
+        fatalError()
+      }
+      #elseif canImport(AppKit)
+      switch self {
+      case .darkGray:
+        return NSColor.darkGray
+      default:
+        fatalError()
+      }
+      #endif
+    }
+  }
+
   private func summaryInfo() -> some View {
     Text("formerly ") + Text("@Instagram").boldBlack() + Text(" ") + Text("@facebook").boldBlack()
   }
@@ -34,7 +62,7 @@ struct ProfileInfoSection: View {
             .fontWeight(.bold)
           Text("amonshiz")
             .font(.subheadline)
-            .foregroundColor(Color(UIColor.darkGray))
+            .foregroundColor(Color(LocalColor.darkGray.outputColor))
         }
         Spacer()
       }
@@ -45,7 +73,7 @@ struct ProfileInfoSection: View {
         Image(systemName: "person.2")
           .frame(width: 24, height: 24)
       }
-      .foregroundColor(Color(UIColor.darkGray))
+      .foregroundColor(Color(LocalColor.darkGray.outputColor))
 
       Label {
         Text("New York, NY")
@@ -53,7 +81,7 @@ struct ProfileInfoSection: View {
         Image(systemName: "drop").rotationEffect(.degrees(180))
           .frame(width: 24, height: 24)
       }
-      .foregroundColor(Color(UIColor.darkGray))
+      .foregroundColor(Color(LocalColor.darkGray.outputColor))
 
       Label {
         socialInfo()
@@ -61,7 +89,7 @@ struct ProfileInfoSection: View {
         Image(systemName: "person")
           .frame(width: 24, height: 24)
       }
-      .foregroundColor(Color(UIColor.darkGray))
+      .foregroundColor(Color(LocalColor.darkGray.outputColor))
     }
   }
 }

@@ -8,25 +8,33 @@
 import SwiftUI
 
 fileprivate struct SectionTitleModifier: ViewModifier {
+  #if os(iOS)
+  static let topPadding: CGFloat = 15
+  static let leadingPadding: CGFloat = -20
+  #else
+  static let topPadding: CGFloat = 0
+  static let leadingPadding: CGFloat = 0
+  #endif
+
   func body(content: Content) -> some View {
     content
-      .padding([.top], 15)
-      .padding([.leading], -20)
-      .textCase(.none)
-      .font(.title3)
-      .foregroundColor(.black)
+//      .padding([.top], Self.topPadding)
+//      .padding([.leading], Self.leadingPadding)
+//      .textCase(.none)
+//      .font(.title3)
+//      .foregroundColor(.black)
   }
 }
 
 struct HomeListSection<Header, Content>: View where Header: View, Content: View {
   let header: () -> Header
   let content: () -> Content
-  
+
   init(@ViewBuilder header: @escaping () -> Header, @ViewBuilder content: @escaping () -> Content) {
     self.header = header
     self.content = content
   }
-  
+
   var body: some View {
     Section(header:
               header()

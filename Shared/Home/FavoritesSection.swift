@@ -19,11 +19,14 @@ struct FavoritesRow: View {
 struct FavoritesSection: View {
   var body: some View {
     HomeListSection {
-      HStack(alignment: .bottom) {
+      HStack(alignment: .center) {
         Text("Favorites")
         Spacer()
-        EditButton()
-          .modifier(EditButtonModifier())
+        Button{
+        } label: {
+          Text("Edit")
+        }
+        .modifier(EditButtonModifier())
       }
     } content: {
       FavoritesRow(imageName: "person.crop.circle", repoName: "amonshiz/ListSectionIndex")
@@ -36,11 +39,20 @@ struct FavoritesSection: View {
 
 struct FavoritesSection_Previews: PreviewProvider {
   static var previews: some View {
+    #if !os(macOS)
     NavigationView {
       List {
         FavoritesSection()
       }
       .listStyle(InsetGroupedListStyle())
     }
+    #else
+    NavigationView {
+      List {
+        FavoritesSection()
+      }
+      .listStyle(InsetListStyle())
+    }
+    #endif
   }
 }

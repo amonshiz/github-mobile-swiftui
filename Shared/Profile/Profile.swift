@@ -18,21 +18,39 @@ struct Links: View {
 }
 
 struct Profile: View {
-  var body: some View {
-    List {
-      ProfileInfoSection()
-        .padding([.top, .bottom])
-        .padding([.leading], -10)
-        .background(Color.white)
-      Section{
-        PinnedSection()
-          .padding([.top, .bottom])
 
-        Links()
-      }
-    }
-    .listStyle(GroupedListStyle())
-    .navigationBarTitleDisplayMode(.inline)
+  func listStyle() -> some ListStyle {
+    #if os(macOS)
+    return SidebarListStyle()
+    #else
+    return GroupedListStyle()
+    #endif
+  }
+
+  var body: some View {
+    applyTitleDisplayMode(
+      content:
+        List {
+          ProfileInfoSection()
+            .padding([.top, .bottom])
+            .padding([.leading], -10)
+            .background(Color.white)
+          Section{
+            PinnedSection()
+              .padding([.top, .bottom])
+
+            Links()
+          }
+        })
+      .listStyle(listStyle())
+  }
+
+  func applyTitleDisplayMode<Content: View>(content: Content) -> some View {
+    #if !os(macOS)
+    return content.navigationBarTitleDisplayMode(.inline)
+    #else
+    return content
+    #endif
   }
 }
 

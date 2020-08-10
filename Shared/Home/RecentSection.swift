@@ -8,6 +8,39 @@
 import SwiftUI
 
 struct RecentRow: View {
+  private enum LocalColor {
+    #if canImport(UIKit)
+    typealias OutputColor = UIColor
+    #elseif canImport(AppKit)
+    typealias OutputColor = NSColor
+    #endif
+   
+    case darkGray
+    case black
+
+    var outputColor: OutputColor {
+      #if canImport(UIKit)
+      switch self {
+      case .darkGray:
+        return UIColor.darkGray
+      case .black:
+        return UIColor.black
+      default:
+        fatalError()
+      }
+      #elseif canImport(AppKit)
+      switch self {
+      case .darkGray:
+        return NSColor.darkGray
+      case .black:
+        return NSColor.black
+      default:
+        fatalError()
+      }
+      #endif
+    }
+  }
+
   var body: some View {
     HStack {
       VStack {
@@ -19,7 +52,7 @@ struct RecentRow: View {
       Spacer()
       VStack(alignment: .leading) {
         (Text("golang / go") + Text(" ") + Text("#38485"))
-          .foregroundColor(Color(UIColor.darkGray))
+          .foregroundColor(Color(LocalColor.darkGray.outputColor))
           .font(.system(size: 15))
         Text("runtime: tracking bug for ARM-based macOS and GOOS/GOARCH values")
           .font(.system(size: 15))
@@ -27,7 +60,7 @@ struct RecentRow: View {
           .padding([.top], 4)
         Text("You commented")
           .padding([.top], 4)
-          .foregroundColor(Color(UIColor.darkGray))
+          .foregroundColor(Color(LocalColor.darkGray.outputColor))
           .font(.system(size: 15))
       }
       .padding([.leading, .trailing], 5)
@@ -42,11 +75,11 @@ struct RecentRow: View {
           .padding([.leading, .trailing], 8)
           .padding([.top, .bottom], 2)
           .background(
-            Color(UIColor.black.withAlphaComponent(0.10))
+            Color(LocalColor.black.outputColor.withAlphaComponent(0.10))
           )
           .clipShape(RoundedRectangle(cornerRadius: 3))
           .overlay(
-            RoundedRectangle(cornerRadius: 3).stroke(Color(UIColor.black.withAlphaComponent(0.15)))
+            RoundedRectangle(cornerRadius: 3).stroke(Color(LocalColor.black.outputColor.withAlphaComponent(0.15)))
           )
         Spacer()
       }
@@ -73,11 +106,20 @@ struct RecentSection: View {
 
 struct RecentSection_Previews: PreviewProvider {
   static var previews: some View {
+    #if !os(macOS)
     NavigationView {
       List {
         RecentSection()
       }
       .listStyle(InsetGroupedListStyle())
     }
+    #else
+    NavigationView {
+      List {
+        RecentSection()
+      }
+      .listStyle(SidebarListStyle())
+    }
+    #endif
   }
 }

@@ -8,6 +8,34 @@
 import SwiftUI
 
 struct PinnedSection: View {
+  private enum LocalColor {
+    #if canImport(UIKit)
+    typealias OutputColor = UIColor
+    #elseif canImport(AppKit)
+    typealias OutputColor = NSColor
+    #endif
+
+    case darkGray
+
+    var outputColor: OutputColor {
+      #if canImport(UIKit)
+      switch self {
+      case .darkGray:
+        return UIColor.darkGray
+      default:
+        fatalError()
+      }
+      #elseif canImport(AppKit)
+      switch self {
+      case .darkGray:
+        return NSColor.darkGray
+      default:
+        fatalError()
+      }
+      #endif
+    }
+  }
+
 
   let cardRows = [
     GridItem(.fixed(200))
@@ -29,7 +57,7 @@ struct PinnedSection: View {
           }
           .overlay(
             RoundedRectangle(cornerRadius: 5)
-              .stroke(Color(UIColor.darkGray), lineWidth: 1)
+              .stroke(Color(LocalColor.darkGray.outputColor), lineWidth: 1)
           )
         }
       }

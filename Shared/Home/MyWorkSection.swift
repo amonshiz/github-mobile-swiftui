@@ -23,11 +23,20 @@ struct MyWorkSection: View {
 
 struct MyWorkSection_Previews: PreviewProvider {
   static var previews: some View {
+    #if !os(macOS)
     NavigationView {
       List {
         MyWorkSection()
       }
       .listStyle(InsetGroupedListStyle())
     }
+    #else
+    NavigationView {
+      List {
+        MyWorkSection()
+      }
+      .listStyle(SidebarListStyle())
+    }
+    #endif
   }
 }
