@@ -7,6 +7,59 @@
 
 import SwiftUI
 
+private struct InfoHeaderButton: View {
+  enum Status {
+    case active(iconColor: Color)
+    case inactive
+  }
+
+  let title: String
+  let iconName: String
+  let status: Status
+  let action: () -> ()
+
+  private func styledButton(status: Status) -> some View {
+    let iconColor: Color
+    let textColor: Color
+    switch status {
+      case let .active(iconColor: ic):
+        iconColor = ic
+        textColor = .gray
+      case .inactive:
+        iconColor = .blue
+        textColor = .blue
+    }
+
+    return HStack(alignment: .center, spacing: 5) {
+      Image(systemName: iconName)
+        .foregroundColor(iconColor)
+      Text(title)
+        .foregroundColor(textColor)
+    }
+  }
+
+  var body: some View {
+    Button {
+      action()
+    } label: {
+      HStack(alignment: .center, spacing: 5) {
+        styledButton(status: status)
+      }
+      .padding([.top, .bottom], 12)
+      .frame(maxWidth: .infinity)
+    }
+    .background(
+      RoundedRectangle(cornerRadius: 5)
+        .fill(Color.white)
+        .shadow(color: Color.black.opacity(0.1), radius: 2, x: 0, y: 2)
+    )
+    .overlay(
+      RoundedRectangle(cornerRadius: 5)
+        .stroke(Color.black.opacity(0.3), lineWidth: 0.5)
+    )
+  }
+}
+
 struct RepoInfoHeader: View {
   var body: some View {
     VStack(alignment: .leading) {
@@ -19,14 +72,14 @@ struct RepoInfoHeader: View {
           .foregroundColor(Color(UIColor.darkGray))
         Spacer()
       }
-      
+
       Text("NavigationTitle")
         .font(.title)
         .boldBlack()
         .padding([.bottom], 8)
       Text("Add a navigation title view to your SwiftUI project")
         .lineLimit(3)
-      
+
       HStack(spacing: 25) {
         Label {
           Text("477 Stars")
@@ -44,48 +97,10 @@ struct RepoInfoHeader: View {
         }
       }
       .padding([.top, .bottom])
-      
+
       HStack(spacing: 15) {
-        Button {
-        } label: {
-          HStack(alignment: .top, spacing: 5) {
-            Image(systemName: "star")
-              .imageScale(.medium)
-            Text("Star")
-          }
-          .padding([.top, .bottom])
-          .frame(maxWidth: .infinity)
-        }
-        .background(
-          RoundedRectangle(cornerRadius: 5)
-            .fill(Color.white)
-            .shadow(color: Color.black.opacity(0.2), radius: 5, x: 0, y: 2)
-        )
-        .overlay(
-          RoundedRectangle(cornerRadius: 5)
-            .stroke(Color.gray, lineWidth: 1)
-        )
-        
-        Button {
-        } label: {
-          HStack(alignment: .center, spacing: 5) {
-            Image(systemName: "eye")
-              .foregroundColor(.green)
-            Text("Watching")
-              .foregroundColor(.gray)
-          }
-          .padding([.top, .bottom])
-          .frame(maxWidth: .infinity)
-        }
-        .background(
-          RoundedRectangle(cornerRadius: 5)
-            .fill(Color.white)
-            .shadow(color: Color.black.opacity(0.2), radius: 2, x: 0, y: 2)
-        )
-        .overlay(
-          RoundedRectangle(cornerRadius: 5)
-            .stroke(Color.gray, lineWidth: 1)
-        )
+        InfoHeaderButton(title: "Star", iconName: "star", status: .inactive) {}
+        InfoHeaderButton(title: "Watching", iconName: "eye", status: .active(iconColor: .green)) {}
       }
     }
   }
