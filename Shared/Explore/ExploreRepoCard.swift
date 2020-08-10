@@ -28,7 +28,46 @@ struct StarButton: View {
   }
 }
 
+private struct ExploreRepoCardFeaturedContent: View {
+  var body: some View {
+    Group {
+      Text("Featured Repository")
+        .font(Font.caption.smallCaps())
+        .padding([.top], 8)
+
+      Text("Ciphey")
+        .font(.title2)
+        .boldBlack()
+    }
+  }
+}
+
+private struct ExploreRepoCardStandardContent: View {
+  var body: some View {
+    HStack {
+      RoundedRectangle(cornerRadius: 5)
+        .fill(Color.red)
+        .frame(width: 48, height: 48)
+      VStack(alignment: .leading) {
+        Text("spotify")
+          .foregroundColor(Color(UIColor.darkGray))
+        Text("XCLogParser")
+          .font(.headline)
+          .fontWeight(.bold)
+      }
+    }
+    .padding([.top, .bottom])
+  }
+}
+
 struct ExploreRepoCard: View {
+  enum Kind {
+    case featured
+    case standard
+  }
+
+  let kind: Kind
+
   var body: some View {
     VStack(alignment: .leading, spacing: 0) {
       Rectangle()
@@ -39,13 +78,12 @@ struct ExploreRepoCard: View {
       Divider()
 
       VStack(alignment: .leading, spacing: 5) {
-        Text("Featured Repository")
-          .font(Font.caption.smallCaps())
-          .padding([.top], 8)
-
-        Text("Ciphey")
-          .font(.title2)
-          .boldBlack()
+        switch self.kind {
+          case .featured:
+            ExploreRepoCardFeaturedContent()
+          case .standard:
+            ExploreRepoCardStandardContent()
+        }
         Text("This is the song that never ends. Yes it goes on and on my friends. Some people started singing it, not knowing what it was. And they'll continue signing forever just  because")
           .fixedSize(horizontal: false, vertical: true)
           .truncationMode(.tail)
@@ -91,7 +129,10 @@ struct ExploreRepoCard: View {
 
 struct ExploreRepoCard_Previews: PreviewProvider {
   static var previews: some View {
-    ExploreRepoCard()
+    ExploreRepoCard(kind: .featured)
+      .padding([.leading, .trailing, .top])
+
+    ExploreRepoCard(kind: .standard)
       .padding([.leading, .trailing, .top])
   }
 }

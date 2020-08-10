@@ -12,26 +12,11 @@ struct Explore: View {
     NavigationView {
       ScrollView(.vertical) {
         VStack {
-          ExploreRepoCard()
-            .padding([.leading, .trailing, .top])
+          ExploreRepoCard(kind: .featured)
+            .padding()
 
-          Text("For You")
-          ScrollView(.horizontal) {
-            LazyHStack {
-              ForEach(0..<20) { _ in
-                Text("For You")
-              }
-            }
-          }
-
-          Text("Treanding today")
-          ScrollView(.horizontal) {
-            LazyHStack {
-              ForEach(0..<20) { _ in
-                Text("Trending")
-              }
-            }
-          }
+          ExploreSection(title: "For you")
+          ExploreSection(title: "Trending today")
         }
       }
       .background(

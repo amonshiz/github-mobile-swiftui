@@ -15,6 +15,8 @@
 		1B145E6924DA09F60078CE29 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B145E6724DA09F60078CE29 /* Profile.swift */; };
 		1B145E6C24DA15190078CE29 /* IconRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B145E6B24DA15190078CE29 /* IconRow.swift */; };
 		1B145E6D24DA15190078CE29 /* IconRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B145E6B24DA15190078CE29 /* IconRow.swift */; };
+		1B9453B524E1AA020091648C /* ExploreSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9453B424E1AA020091648C /* ExploreSection.swift */; };
+		1B9453B624E1AA020091648C /* ExploreSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9453B424E1AA020091648C /* ExploreSection.swift */; };
 		1BA6E6BF24DC99510071A4D9 /* PinnedSectionCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA6E6BE24DC99510071A4D9 /* PinnedSectionCard.swift */; };
 		1BA6E6C024DC99510071A4D9 /* PinnedSectionCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA6E6BE24DC99510071A4D9 /* PinnedSectionCard.swift */; };
 		1BA6E6C224DCA9720071A4D9 /* ExploreRepoCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA6E6C124DCA9720071A4D9 /* ExploreRepoCard.swift */; };
@@ -48,6 +50,7 @@
 		1B145E6324D9E9EA0078CE29 /* RecentSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentSection.swift; sourceTree = "<group>"; };
 		1B145E6724DA09F60078CE29 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		1B145E6B24DA15190078CE29 /* IconRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconRow.swift; sourceTree = "<group>"; };
+		1B9453B424E1AA020091648C /* ExploreSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreSection.swift; sourceTree = "<group>"; };
 		1BA6E6BE24DC99510071A4D9 /* PinnedSectionCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinnedSectionCard.swift; sourceTree = "<group>"; };
 		1BA6E6C124DCA9720071A4D9 /* ExploreRepoCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreRepoCard.swift; sourceTree = "<group>"; };
 		1BBC1A3E24D9AA4B00447398 /* github_mobileApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = github_mobileApp.swift; sourceTree = "<group>"; };
@@ -169,6 +172,7 @@
 			children = (
 				1BBC1A6B24D9C16400447398 /* Explore.swift */,
 				1BA6E6C124DCA9720071A4D9 /* ExploreRepoCard.swift */,
+				1B9453B424E1AA020091648C /* ExploreSection.swift */,
 			);
 			path = Explore;
 			sourceTree = "<group>";
@@ -294,6 +298,7 @@
 				1B145E6124D9E6B80078CE29 /* FavoritesSection.swift in Sources */,
 				1B145E6824DA09F60078CE29 /* Profile.swift in Sources */,
 				1B145E6C24DA15190078CE29 /* IconRow.swift in Sources */,
+				1B9453B524E1AA020091648C /* ExploreSection.swift in Sources */,
 				1BBC1A7224D9C16400447398 /* Home.swift in Sources */,
 				1BCC2F8124DC60AA00A81903 /* PinnedSection.swift in Sources */,
 				1BBC1A5124D9AA4E00447398 /* github_mobileApp.swift in Sources */,
@@ -317,6 +322,7 @@
 				1B145E6224D9E6B80078CE29 /* FavoritesSection.swift in Sources */,
 				1B145E6924DA09F60078CE29 /* Profile.swift in Sources */,
 				1B145E6D24DA15190078CE29 /* IconRow.swift in Sources */,
+				1B9453B624E1AA020091648C /* ExploreSection.swift in Sources */,
 				1BBC1A7324D9C16400447398 /* Home.swift in Sources */,
 				1BCC2F8224DC60AA00A81903 /* PinnedSection.swift in Sources */,
 				1BBC1A5224D9AA4E00447398 /* github_mobileApp.swift in Sources */,
