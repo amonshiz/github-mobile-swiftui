@@ -13,18 +13,13 @@ struct Repo: View {
       Section {
         RepoInfoHeader().background(Color.white)
           .padding([.top, .bottom])
-        NavigationLink(destination: Text("Issues")) {
-          Text("Issues")
-        }
-        NavigationLink(destination: Text("Pull Requests")) {
-          Text("Pull Requests")
-        }
-        NavigationLink(destination: Text("Watchers")) {
-          Text("Watchers")
-        }
-        NavigationLink(destination: Text("License")) {
-          Text("License")
-        }
+        IconRow(style: .base(title: "Issues", iconName: "exclamationmark.circle", backgroundColor: .green))
+
+        IconRow(style: .base(title: "Pull Requests", iconName: "point.topleft.down.curvedto.point.bottomright.up", backgroundColor: .blue))
+
+        IconRow(style: .base(title: "Watchers", iconName: "eye", backgroundColor: .purple))
+
+        IconRow(style: .base(title: "License", iconName: "scale.3d", backgroundColor: .red))
       }
       
       Section(header:
@@ -59,6 +54,8 @@ struct Repo: View {
 
 struct Repo_Previews: PreviewProvider {
   static var previews: some View {
-    Repo()
+    NavigationView {
+      Repo()
+    }
   }
 }
