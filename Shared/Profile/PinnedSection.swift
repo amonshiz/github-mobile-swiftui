@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct PinnedSection: View {
-  
+
   let cardRows = [
     GridItem(.fixed(200))
   ]
-  
+
   var body: some View {
     VStack(alignment: .leading) {
       Label {
@@ -20,7 +20,7 @@ struct PinnedSection: View {
       } icon: {
         Image(systemName: "pin").rotationEffect(.degrees(-45))
       }
-      
+
       ScrollView(.horizontal, showsIndicators: false) {
         LazyHGrid(rows: cardRows, spacing: 15) {
           ForEach(0..<20) { val in
