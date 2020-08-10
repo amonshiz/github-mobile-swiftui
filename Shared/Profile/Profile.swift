@@ -22,7 +22,6 @@ struct Profile: View {
     List {
       ProfileInfoSection()
         .padding([.top, .bottom])
-        .padding([.leading], -10)
         .background(Color.white)
       Section{
         PinnedSection()
