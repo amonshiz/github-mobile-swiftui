@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct PinnedSection: View {
-
+  
   let cardRows = [
     GridItem(.fixed(200))
   ]
-
+  
   var body: some View {
     VStack(alignment: .leading) {
       Label {
@@ -20,14 +20,14 @@ struct PinnedSection: View {
       } icon: {
         Image(systemName: "pin").rotationEffect(.degrees(-45))
       }
-
+      
       ScrollView(.horizontal, showsIndicators: false) {
         LazyHGrid(rows: cardRows, spacing: 15) {
           ForEach(0..<20) { val in
             PinnedSectionCard()
               .frame(width:345)
               .overlay(
-                NavigationLink(destination: Text("Destination \(val)")) {
+                NavigationLink(destination: Repo()) {
                   Color.clear
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
                     .opacity(0)
@@ -46,6 +46,8 @@ struct PinnedSection: View {
 
 struct PinnedSection_Previews: PreviewProvider {
   static var previews: some View {
-    PinnedSection()
+    NavigationView {
+      PinnedSection()
+    }
   }
 }

@@ -12,7 +12,7 @@ struct FavoritesRow: View {
   let repoName: String
 
   var body: some View {
-    IconRow(style: .base(title: repoName, iconName: imageName, backgroundColor: .yellow))
+    IconRow(destination: Repo(), style: .base(title: repoName, iconName: imageName, backgroundColor: .yellow))
   }
 }
 

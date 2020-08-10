@@ -10,9 +10,9 @@ import SwiftUI
 struct Links: View {
   var body: some View {
     Group {
-      IconRow(style: .count(title: "Repositories", count: 30, iconName: "book.closed", backgroundColor: .purple))
-      IconRow(style: .count(title: "Starred", count: 47, iconName: "star", backgroundColor: .yellow))
-      IconRow(style: .count(title: "Organizations", count: 2, iconName: "person.2", backgroundColor: .orange))
+      IconRow(destination: Text("Repositories"), style: .count(title: "Repositories", count: 30, iconName: "book.closed", backgroundColor: .purple))
+      IconRow(destination: Text("Starred"), style: .count(title: "Starred", count: 47, iconName: "star", backgroundColor: .yellow))
+      IconRow(destination: Text("Organizations"), style: .count(title: "Organizations", count: 2, iconName: "person.2", backgroundColor: .orange))
     }
   }
 }

@@ -13,13 +13,13 @@ struct Repo: View {
       Section {
         RepoInfoHeader().background(Color.white)
           .padding([.top, .bottom])
-        IconRow(style: .base(title: "Issues", iconName: "exclamationmark.circle", backgroundColor: .green))
+        IconRow(destination: Text("Issues"), style: .base(title: "Issues", iconName: "exclamationmark.circle", backgroundColor: .green))
 
-        IconRow(style: .base(title: "Pull Requests", iconName: "point.topleft.down.curvedto.point.bottomright.up", backgroundColor: .blue))
+        IconRow(destination: Text("Pull Requests"), style: .base(title: "Pull Requests", iconName: "point.topleft.down.curvedto.point.bottomright.up", backgroundColor: .blue))
 
-        IconRow(style: .base(title: "Watchers", iconName: "eye", backgroundColor: .purple))
+        IconRow(destination: Text("Watchers"), style: .base(title: "Watchers", iconName: "eye", backgroundColor: .purple))
 
-        IconRow(style: .base(title: "License", iconName: "scale.3d", backgroundColor: .red))
+        IconRow(destination: Text("License"), style: .base(title: "License", iconName: "scale.3d", backgroundColor: .red))
       }
       
       Section(header:

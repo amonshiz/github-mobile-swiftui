@@ -14,6 +14,9 @@ struct Explore: View {
         VStack {
           ExploreRepoCard(kind: .featured)
             .padding()
+            .overlay(
+              NavigationLink(destination: Repo()) { Color.clear }
+            )
 
           ExploreSection(title: "For you")
           ExploreSection(title: "Trending today")

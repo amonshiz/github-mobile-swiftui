@@ -7,17 +7,18 @@
 
 import SwiftUI
 
-struct IconRow: View {
+struct IconRow<Destination: View>: View {
   enum Style {
     case base(title: String, iconName: String, backgroundColor: Color)
     case count(title: String, count: Int, iconName: String, backgroundColor: Color)
   }
 
+  let destination: Destination
   let style: Style
 
   private func view(title: String, count: Int?, iconName: String, backgroundColor: Color) -> some View {
     NavigationLink(
-      destination: Text(title),
+      destination: destination,
       label: {
         HStack {
           Label {

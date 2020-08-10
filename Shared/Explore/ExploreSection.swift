@@ -25,6 +25,9 @@ struct ExploreSection: View {
             ExploreRepoCard(kind: .standard)
               .frame(idealWidth:350, minHeight: 500)
               .fixedSize(horizontal: true, vertical: false)
+              .overlay(
+                NavigationLink(destination: Repo()) { Color.clear }
+              )
           }
         }
         .fixedSize(horizontal: false, vertical: true)
