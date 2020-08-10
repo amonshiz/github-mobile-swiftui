@@ -10,7 +10,9 @@ import SwiftUI
 struct Repo: View {
   var body: some View {
     List {
-      Section(header: Text("Info Header")) {
+      Section {
+        RepoInfoHeader().background(Color.white)
+          .padding([.top, .bottom])
         NavigationLink(destination: Text("Issues")) {
           Text("Issues")
         }
@@ -24,7 +26,7 @@ struct Repo: View {
           Text("License")
         }
       }
-
+      
       Section(header:
                 HStack {
                   Image(systemName: "point.topleft.down.curvedto.point.bottomright.up")
