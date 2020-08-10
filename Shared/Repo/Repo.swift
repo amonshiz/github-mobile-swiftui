@@ -44,6 +44,8 @@ struct Repo: View {
             Text("Commits")
             Spacer()
             Text("18")
+              .font(.callout)
+              .foregroundColor(.gray)
           }
         }
       }
