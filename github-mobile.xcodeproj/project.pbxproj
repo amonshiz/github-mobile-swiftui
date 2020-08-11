@@ -51,6 +51,8 @@
 		1BCC2F7F24DC54AF00A81903 /* ProfileInfoSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCC2F7D24DC54AF00A81903 /* ProfileInfoSection.swift */; };
 		1BCC2F8124DC60AA00A81903 /* PinnedSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCC2F8024DC60AA00A81903 /* PinnedSection.swift */; };
 		1BCC2F8224DC60AA00A81903 /* PinnedSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCC2F8024DC60AA00A81903 /* PinnedSection.swift */; };
+		DA433B4624E33133007CD456 /* Issues.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA433B4524E33133007CD456 /* Issues.swift */; };
+		DA433B4824E332C4007CD456 /* IssueRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA433B4724E332C4007CD456 /* IssueRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -81,6 +83,8 @@
 		1BBC1A7A24D9C31200447398 /* MyWorkSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWorkSection.swift; sourceTree = "<group>"; };
 		1BCC2F7D24DC54AF00A81903 /* ProfileInfoSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInfoSection.swift; sourceTree = "<group>"; };
 		1BCC2F8024DC60AA00A81903 /* PinnedSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinnedSection.swift; sourceTree = "<group>"; };
+		DA433B4524E33133007CD456 /* Issues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Issues.swift; sourceTree = "<group>"; };
+		DA433B4724E332C4007CD456 /* IssueRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +136,7 @@
 		1B68C7B124E2E747000CB565 /* Lists */ = {
 			isa = PBXGroup;
 			children = (
+				DA433B4424E33124007CD456 /* Issues */,
 				1B68C7B224E2E75A000CB565 /* Watchers */,
 			);
 			path = Lists;
@@ -228,6 +233,15 @@
 				1B145E6324D9E9EA0078CE29 /* RecentSection.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		DA433B4424E33124007CD456 /* Issues */ = {
+			isa = PBXGroup;
+			children = (
+				DA433B4524E33133007CD456 /* Issues.swift */,
+				DA433B4724E332C4007CD456 /* IssueRow.swift */,
+			);
+			path = Issues;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -333,6 +347,7 @@
 				1BBC1A7524D9C1F400447398 /* HomeListSection.swift in Sources */,
 				1BBC1A6E24D9C16400447398 /* Notifications.swift in Sources */,
 				1B55304E24E1DB9B00FA836C /* Repo.swift in Sources */,
+				DA433B4824E332C4007CD456 /* IssueRow.swift in Sources */,
 				1BBC1A5324D9AA4E00447398 /* ContentView.swift in Sources */,
 				1B145E6424D9E9EA0078CE29 /* RecentSection.swift in Sources */,
 				1BBC1A7B24D9C31200447398 /* MyWorkSection.swift in Sources */,
@@ -344,6 +359,7 @@
 				1B9453B524E1AA020091648C /* ExploreSection.swift in Sources */,
 				1B68C7B424E2E8B3000CB565 /* Watchers.swift in Sources */,
 				1BBC1A7224D9C16400447398 /* Home.swift in Sources */,
+				DA433B4624E33133007CD456 /* Issues.swift in Sources */,
 				1BCC2F8124DC60AA00A81903 /* PinnedSection.swift in Sources */,
 				1BBC1A5124D9AA4E00447398 /* github_mobileApp.swift in Sources */,
 				1BCC2F7E24DC54AF00A81903 /* ProfileInfoSection.swift in Sources */,
