@@ -12,12 +12,12 @@ private struct InfoHeaderButton: View {
     case active(iconColor: Color)
     case inactive
   }
-
+  
   let title: String
   let iconName: String
   let status: Status
   let action: () -> ()
-
+  
   private func styledButton(status: Status) -> some View {
     let iconColor: Color
     let textColor: Color
@@ -29,7 +29,7 @@ private struct InfoHeaderButton: View {
         iconColor = .blue
         textColor = .blue
     }
-
+    
     return HStack(alignment: .center, spacing: 5) {
       Image(systemName: iconName)
         .foregroundColor(iconColor)
@@ -37,7 +37,7 @@ private struct InfoHeaderButton: View {
         .foregroundColor(textColor)
     }
   }
-
+  
   var body: some View {
     Button {
       action()
@@ -72,14 +72,14 @@ struct RepoInfoHeader: View {
           .foregroundColor(Color(UIColor.darkGray))
         Spacer()
       }
-
+      
       Text("NavigationTitle")
         .font(.title)
         .boldBlack()
         .padding([.bottom], 8)
       Text("Add a navigation title view to your SwiftUI project")
         .lineLimit(3)
-
+      
       HStack(spacing: 25) {
         Label {
           Text("477 Stars")
@@ -97,11 +97,12 @@ struct RepoInfoHeader: View {
         }
       }
       .padding([.top, .bottom])
-
+      
       HStack(spacing: 15) {
         InfoHeaderButton(title: "Star", iconName: "star", status: .inactive) {}
         InfoHeaderButton(title: "Watching", iconName: "eye", status: .active(iconColor: .green)) {}
       }
+      .buttonStyle(BorderlessButtonStyle())
     }
   }
 }
