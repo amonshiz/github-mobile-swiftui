@@ -7,6 +7,27 @@
 
 import SwiftUI
 
+private struct StarsForks: View {
+  var body: some View {
+    HStack(spacing: 25) {
+      Label {
+        Text("477 Stars")
+          .font(.callout)
+      } icon: {
+        Image(systemName: "star")
+          .imageScale(.small)
+      }
+      Label {
+        Text("26 Forks")
+          .font(.callout)
+      } icon: {
+        Image(systemName: "point.topleft.down.curvedto.point.bottomright.up")
+          .imageScale(.small)
+      }
+    }
+  }
+}
+
 private struct InfoHeaderButton: View {
   enum Status {
     case active(iconColor: Color)
@@ -72,32 +93,16 @@ struct RepoInfoHeader: View {
           .foregroundColor(Color(UIColor.darkGray))
         Spacer()
       }
-      
+
       Text("NavigationTitle")
         .font(.title)
         .boldBlack()
         .padding([.bottom], 8)
       Text("Add a navigation title view to your SwiftUI project")
         .lineLimit(3)
-      
-      HStack(spacing: 25) {
-        Label {
-          Text("477 Stars")
-            .font(.callout)
-        } icon: {
-          Image(systemName: "star")
-            .imageScale(.small)
-        }
-        Label {
-          Text("26 Forks")
-            .font(.callout)
-        } icon: {
-          Image(systemName: "point.topleft.down.curvedto.point.bottomright.up")
-            .imageScale(.small)
-        }
-      }
-      .padding([.top, .bottom])
-      
+
+      StarsForks().padding([.top, .bottom])
+
       HStack(spacing: 15) {
         InfoHeaderButton(title: "Star", iconName: "star", status: .inactive) {}
         InfoHeaderButton(title: "Watching", iconName: "eye", status: .active(iconColor: .green)) {}
