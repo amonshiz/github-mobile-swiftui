@@ -21,7 +21,7 @@ struct Repo: View {
 
         IconRow(destination: Text("Pull Requests"), style: .base(title: "Pull Requests", iconName: "point.topleft.down.curvedto.point.bottomright.up", backgroundColor: .blue))
 
-        IconRow(destination: Text("Watchers"), style: .base(title: "Watchers", iconName: "eye", backgroundColor: .purple))
+        IconRow(destination: Watchers(), style: .base(title: "Watchers", iconName: "eye", backgroundColor: .purple))
 
         IconRow(destination: Text("License"), style: .base(title: "License", iconName: "scale.3d", backgroundColor: .red))
       }

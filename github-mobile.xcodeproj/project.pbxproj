@@ -19,6 +19,8 @@
 		1B55304F24E1DB9B00FA836C /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B55304D24E1DB9B00FA836C /* Repo.swift */; };
 		1B55305124E1DF5900FA836C /* RepoInfoHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B55305024E1DF5900FA836C /* RepoInfoHeader.swift */; };
 		1B55305224E1DF5900FA836C /* RepoInfoHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B55305024E1DF5900FA836C /* RepoInfoHeader.swift */; };
+		1B68C7B424E2E8B3000CB565 /* Watchers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B68C7B324E2E8B3000CB565 /* Watchers.swift */; };
+		1B68C7B524E2E8B3000CB565 /* Watchers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B68C7B324E2E8B3000CB565 /* Watchers.swift */; };
 		1B9453B524E1AA020091648C /* ExploreSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9453B424E1AA020091648C /* ExploreSection.swift */; };
 		1B9453B624E1AA020091648C /* ExploreSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9453B424E1AA020091648C /* ExploreSection.swift */; };
 		1BA6E6BF24DC99510071A4D9 /* PinnedSectionCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA6E6BE24DC99510071A4D9 /* PinnedSectionCard.swift */; };
@@ -56,6 +58,7 @@
 		1B145E6B24DA15190078CE29 /* IconRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconRow.swift; sourceTree = "<group>"; };
 		1B55304D24E1DB9B00FA836C /* Repo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
 		1B55305024E1DF5900FA836C /* RepoInfoHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoInfoHeader.swift; sourceTree = "<group>"; };
+		1B68C7B324E2E8B3000CB565 /* Watchers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Watchers.swift; sourceTree = "<group>"; };
 		1B9453B424E1AA020091648C /* ExploreSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreSection.swift; sourceTree = "<group>"; };
 		1BA6E6BE24DC99510071A4D9 /* PinnedSectionCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinnedSectionCard.swift; sourceTree = "<group>"; };
 		1BA6E6C124DCA9720071A4D9 /* ExploreRepoCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreRepoCard.swift; sourceTree = "<group>"; };
@@ -123,6 +126,22 @@
 			path = Repo;
 			sourceTree = "<group>";
 		};
+		1B68C7B124E2E747000CB565 /* Lists */ = {
+			isa = PBXGroup;
+			children = (
+				1B68C7B224E2E75A000CB565 /* Watchers */,
+			);
+			path = Lists;
+			sourceTree = "<group>";
+		};
+		1B68C7B224E2E75A000CB565 /* Watchers */ = {
+			isa = PBXGroup;
+			children = (
+				1B68C7B324E2E8B3000CB565 /* Watchers.swift */,
+			);
+			path = Watchers;
+			sourceTree = "<group>";
+		};
 		1BBC1A3824D9AA4B00447398 = {
 			isa = PBXGroup;
 			children = (
@@ -136,6 +155,7 @@
 		1BBC1A3D24D9AA4B00447398 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				1B68C7B124E2E747000CB565 /* Lists */,
 				1B55304C24E1DB8500FA836C /* Repo */,
 				1B145E6A24DA15100078CE29 /* SharedViews */,
 				1B145E6624DA09ED0078CE29 /* Profile */,
@@ -317,6 +337,7 @@
 				1B145E6824DA09F60078CE29 /* Profile.swift in Sources */,
 				1B145E6C24DA15190078CE29 /* IconRow.swift in Sources */,
 				1B9453B524E1AA020091648C /* ExploreSection.swift in Sources */,
+				1B68C7B424E2E8B3000CB565 /* Watchers.swift in Sources */,
 				1BBC1A7224D9C16400447398 /* Home.swift in Sources */,
 				1BCC2F8124DC60AA00A81903 /* PinnedSection.swift in Sources */,
 				1BBC1A5124D9AA4E00447398 /* github_mobileApp.swift in Sources */,
@@ -343,6 +364,7 @@
 				1B145E6924DA09F60078CE29 /* Profile.swift in Sources */,
 				1B145E6D24DA15190078CE29 /* IconRow.swift in Sources */,
 				1B9453B624E1AA020091648C /* ExploreSection.swift in Sources */,
+				1B68C7B524E2E8B3000CB565 /* Watchers.swift in Sources */,
 				1BBC1A7324D9C16400447398 /* Home.swift in Sources */,
 				1BCC2F8224DC60AA00A81903 /* PinnedSection.swift in Sources */,
 				1BBC1A5224D9AA4E00447398 /* github_mobileApp.swift in Sources */,
