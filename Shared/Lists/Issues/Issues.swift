@@ -14,6 +14,7 @@ struct Issues: View {
         IssueRow()
       }
     }
+    .addSearchController()
     .navigationTitle("Issues")
     .navigationBarTitleDisplayMode(.inline)
     .toolbar(items: {

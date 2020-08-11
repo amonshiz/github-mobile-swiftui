@@ -53,6 +53,7 @@
 		1BCC2F8224DC60AA00A81903 /* PinnedSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCC2F8024DC60AA00A81903 /* PinnedSection.swift */; };
 		DA433B4624E33133007CD456 /* Issues.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA433B4524E33133007CD456 /* Issues.swift */; };
 		DA433B4824E332C4007CD456 /* IssueRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA433B4724E332C4007CD456 /* IssueRow.swift */; };
+		DA433B4A24E334B8007CD456 /* IssueSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA433B4924E334B8007CD456 /* IssueSearchController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -85,6 +86,7 @@
 		1BCC2F8024DC60AA00A81903 /* PinnedSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinnedSection.swift; sourceTree = "<group>"; };
 		DA433B4524E33133007CD456 /* Issues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Issues.swift; sourceTree = "<group>"; };
 		DA433B4724E332C4007CD456 /* IssueRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueRow.swift; sourceTree = "<group>"; };
+		DA433B4924E334B8007CD456 /* IssueSearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueSearchController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -240,6 +242,7 @@
 			children = (
 				DA433B4524E33133007CD456 /* Issues.swift */,
 				DA433B4724E332C4007CD456 /* IssueRow.swift */,
+				DA433B4924E334B8007CD456 /* IssueSearchController.swift */,
 			);
 			path = Issues;
 			sourceTree = "<group>";
@@ -358,6 +361,7 @@
 				1B145E6C24DA15190078CE29 /* IconRow.swift in Sources */,
 				1B9453B524E1AA020091648C /* ExploreSection.swift in Sources */,
 				1B68C7B424E2E8B3000CB565 /* Watchers.swift in Sources */,
+				DA433B4A24E334B8007CD456 /* IssueSearchController.swift in Sources */,
 				1BBC1A7224D9C16400447398 /* Home.swift in Sources */,
 				DA433B4624E33133007CD456 /* Issues.swift in Sources */,
 				1BCC2F8124DC60AA00A81903 /* PinnedSection.swift in Sources */,

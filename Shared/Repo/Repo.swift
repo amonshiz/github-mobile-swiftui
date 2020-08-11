@@ -17,7 +17,7 @@ struct Repo: View {
               .allowsHitTesting(false))
           .padding([.top, .bottom])
 
-        IconRow(destination: Text("Issues"), style: .base(title: "Issues", iconName: "exclamationmark.circle", backgroundColor: .green))
+        IconRow(destination: Issues(), style: .base(title: "Issues", iconName: "exclamationmark.circle", backgroundColor: .green))
 
         IconRow(destination: Text("Pull Requests"), style: .base(title: "Pull Requests", iconName: "point.topleft.down.curvedto.point.bottomright.up", backgroundColor: .blue))
 
