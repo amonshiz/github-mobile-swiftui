@@ -57,13 +57,24 @@ struct WatcherRow: View {
 struct Watchers: View {
   var body: some View {
     List(watchers) { w in
-      WatcherRow(watcher: w)
+      HStack {
+        WatcherRow(watcher: w)
+        NavigationLink(
+          destination: Profile(),
+          label: {
+            EmptyView()
+          })
+          .frame(width: 0, height: 0)
+      }
     }
+    .navigationTitle("Watchers")
   }
 }
 
 struct Watchers_Previews: PreviewProvider {
   static var previews: some View {
-    Watchers()
+    NavigationView {
+      Watchers()
+    }
   }
 }
