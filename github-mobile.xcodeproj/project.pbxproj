@@ -21,6 +21,8 @@
 		1B55305224E1DF5900FA836C /* RepoInfoHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B55305024E1DF5900FA836C /* RepoInfoHeader.swift */; };
 		1B68C7B424E2E8B3000CB565 /* Watchers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B68C7B324E2E8B3000CB565 /* Watchers.swift */; };
 		1B68C7B524E2E8B3000CB565 /* Watchers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B68C7B324E2E8B3000CB565 /* Watchers.swift */; };
+		1B68C7B724E30047000CB565 /* WatcherRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B68C7B624E30047000CB565 /* WatcherRow.swift */; };
+		1B68C7B824E30047000CB565 /* WatcherRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B68C7B624E30047000CB565 /* WatcherRow.swift */; };
 		1B9453B524E1AA020091648C /* ExploreSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9453B424E1AA020091648C /* ExploreSection.swift */; };
 		1B9453B624E1AA020091648C /* ExploreSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9453B424E1AA020091648C /* ExploreSection.swift */; };
 		1BA6E6BF24DC99510071A4D9 /* PinnedSectionCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA6E6BE24DC99510071A4D9 /* PinnedSectionCard.swift */; };
@@ -59,6 +61,7 @@
 		1B55304D24E1DB9B00FA836C /* Repo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
 		1B55305024E1DF5900FA836C /* RepoInfoHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoInfoHeader.swift; sourceTree = "<group>"; };
 		1B68C7B324E2E8B3000CB565 /* Watchers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Watchers.swift; sourceTree = "<group>"; };
+		1B68C7B624E30047000CB565 /* WatcherRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatcherRow.swift; sourceTree = "<group>"; };
 		1B9453B424E1AA020091648C /* ExploreSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreSection.swift; sourceTree = "<group>"; };
 		1BA6E6BE24DC99510071A4D9 /* PinnedSectionCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinnedSectionCard.swift; sourceTree = "<group>"; };
 		1BA6E6C124DCA9720071A4D9 /* ExploreRepoCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreRepoCard.swift; sourceTree = "<group>"; };
@@ -138,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				1B68C7B324E2E8B3000CB565 /* Watchers.swift */,
+				1B68C7B624E30047000CB565 /* WatcherRow.swift */,
 			);
 			path = Watchers;
 			sourceTree = "<group>";
@@ -324,6 +328,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1BBC1A7824D9C29400447398 /* HomeList.swift in Sources */,
+				1B68C7B724E30047000CB565 /* WatcherRow.swift in Sources */,
 				1B55305124E1DF5900FA836C /* RepoInfoHeader.swift in Sources */,
 				1BBC1A7524D9C1F400447398 /* HomeListSection.swift in Sources */,
 				1BBC1A6E24D9C16400447398 /* Notifications.swift in Sources */,
@@ -351,6 +356,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1BBC1A7924D9C29400447398 /* HomeList.swift in Sources */,
+				1B68C7B824E30047000CB565 /* WatcherRow.swift in Sources */,
 				1B55305224E1DF5900FA836C /* RepoInfoHeader.swift in Sources */,
 				1BBC1A7624D9C1F400447398 /* HomeListSection.swift in Sources */,
 				1BBC1A6F24D9C16400447398 /* Notifications.swift in Sources */,
