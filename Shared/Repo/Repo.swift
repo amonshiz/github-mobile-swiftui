@@ -23,7 +23,7 @@ struct Repo: View {
 
         IconRow(destination: Watchers(), style: .base(title: "Watchers", iconName: "eye", backgroundColor: .purple))
 
-        IconRow(destination: Text("License"), style: .base(title: "License", iconName: "scale.3d", backgroundColor: .red))
+        IconRow(destination: SourceCode(), style: .base(title: "License", iconName: "scale.3d", backgroundColor: .red))
       }
       
       Section(header:

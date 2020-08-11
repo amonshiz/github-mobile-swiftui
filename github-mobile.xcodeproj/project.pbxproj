@@ -54,6 +54,8 @@
 		DA433B4624E33133007CD456 /* Issues.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA433B4524E33133007CD456 /* Issues.swift */; };
 		DA433B4824E332C4007CD456 /* IssueRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA433B4724E332C4007CD456 /* IssueRow.swift */; };
 		DA433B4A24E334B8007CD456 /* IssueSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA433B4924E334B8007CD456 /* IssueSearchController.swift */; };
+		DAA264B524E340BD001D4875 /* SourceCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA264B424E340BD001D4875 /* SourceCode.swift */; };
+		DAA264B624E340BD001D4875 /* SourceCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA264B424E340BD001D4875 /* SourceCode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -87,6 +89,7 @@
 		DA433B4524E33133007CD456 /* Issues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Issues.swift; sourceTree = "<group>"; };
 		DA433B4724E332C4007CD456 /* IssueRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueRow.swift; sourceTree = "<group>"; };
 		DA433B4924E334B8007CD456 /* IssueSearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueSearchController.swift; sourceTree = "<group>"; };
+		DAA264B424E340BD001D4875 /* SourceCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceCode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +134,7 @@
 			children = (
 				1B55304D24E1DB9B00FA836C /* Repo.swift */,
 				1B55305024E1DF5900FA836C /* RepoInfoHeader.swift */,
+				DAA264B424E340BD001D4875 /* SourceCode.swift */,
 			);
 			path = Repo;
 			sourceTree = "<group>";
@@ -354,6 +358,7 @@
 				1BBC1A5324D9AA4E00447398 /* ContentView.swift in Sources */,
 				1B145E6424D9E9EA0078CE29 /* RecentSection.swift in Sources */,
 				1BBC1A7B24D9C31200447398 /* MyWorkSection.swift in Sources */,
+				DAA264B524E340BD001D4875 /* SourceCode.swift in Sources */,
 				1BBC1A7024D9C16400447398 /* Explore.swift in Sources */,
 				1BA6E6BF24DC99510071A4D9 /* PinnedSectionCard.swift in Sources */,
 				1B145E6124D9E6B80078CE29 /* FavoritesSection.swift in Sources */,
@@ -376,6 +381,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1BBC1A7924D9C29400447398 /* HomeList.swift in Sources */,
+				DAA264B624E340BD001D4875 /* SourceCode.swift in Sources */,
 				1B68C7B824E30047000CB565 /* WatcherRow.swift in Sources */,
 				1B55305224E1DF5900FA836C /* RepoInfoHeader.swift in Sources */,
 				1BBC1A7624D9C1F400447398 /* HomeListSection.swift in Sources */,
